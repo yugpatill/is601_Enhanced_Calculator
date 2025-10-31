@@ -11,7 +11,7 @@ Advanced command-line calculator with:
 ## 1) Install
 
 ```bash
-git clone <your-repo-url> is601_Enhanced_Calculator
+git clone https://github.com/yugpatill/is601_Enhanced_Calculator
 cd is601_Enhanced_Calculator
 python3 -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
