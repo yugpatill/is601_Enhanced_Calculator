@@ -51,7 +51,7 @@ Undo OK.
 1. 2025-10-30T00:00:00Z | add(2,3) = 5.00000000
 ```
 
-# Usage Guide (Command-Line Interface)
+## 4) Usage Guide (Command-Line Interface)
 
 Start the calculator: python main.py
 
