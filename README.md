@@ -51,11 +51,38 @@ Undo OK.
 1. 2025-10-30T00:00:00Z | add(2,3) = 5.00000000
 ```
 
-## 4) Commands
+# Usage Guide (Command-Line Interface)
 
-- `add a b`, `subtract a b`, `multiply a b`, `divide a b`
-- `power a b`, `root a b`, `modulus a b`, `int_divide a b`, `percent a b`, `abs_diff a b`
-- `history`, `clear`, `undo`, `redo`, `save`, `load`, `help`, `exit`
+Start the calculator: python main.py
+
+You’ll enter a REPL (Read–Eval–Print Loop) that supports color-coded output and the following commands:
+
+| Command | Description |
+|----------|--------------|
+| `add a b` | Adds two numbers |
+| `subtract a b` | Subtracts **b** from **a** |
+| `multiply a b` | Multiplies **a** and **b** |
+| `divide a b` | Divides **a** by **b** |
+| `power a b` | Raises **a** to the power of **b** |
+| `root a b` | Calculates the **b**-th root of **a** |
+| `modulus a b` | Computes the remainder of **a ÷ b** |
+| `int_divide a b` | Performs integer division of **a ÷ b** |
+| `percent a b` | Calculates **(a / b) × 100** |
+| `abs_diff a b` | Returns the absolute difference between **a** and **b** |
+| `history` | Displays the complete calculation history |
+| `undo` | Reverts the last calculation |
+| `redo` | Re-applies the last undone calculation |
+| `clear` | Clears the calculation history |
+| `save` | Saves history to a CSV file manually |
+| `load` | Loads saved history from a CSV file |
+| `help` | Displays all available commands |
+| `exit` | Exits the calculator application |
+
+>Color Codes
+
+- <span style="color:green;">**Green**</span>: Successful operation  
+- <span style="color:red;">**Red**</span>: Error message  
+- <span style="color:cyan;">**Cyan**</span>: Informational text
 
 **Notes**
 - `percent(a,b) = (a/b)*100` (numeric result)
@@ -63,6 +90,11 @@ Undo OK.
 - `root(a,b)` uses integer `b`; even root of negative is invalid
 
 ## 5) Testing & Coverage
+
+```bash
+pytest
+```
+or
 
 ```bash
 pytest --cov=app --cov-report=term-missing --cov-fail-under=90
